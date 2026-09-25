@@ -1,0 +1,37 @@
+# PlayerWarpsBlueMap
+
+marker-set:
+  id: "player-warps"
+  label: "Player Warps"
+
+  # Whether players can toggle the marker group
+  toggleable: true
+
+  # Whether markers start hidden
+  default-hidden: false
+
+markers:
+  # How the marker name appears.
+  label: "%warp%"
+
+  # Information displayed when clicking the marker.
+  detail: |
+    <div style="text-align:center;">
+      <b>%warp%</b><br>
+      Owner: %owner%<br>
+      World: %world%<br>
+      X: %x% Y: %y% Z: %z%<br>
+      %description%
+    </div>
+
+# Only show warps that PlayerWarps considers accessible.
+only-accessible-warps: true
+
+# How often we compare PlayerWarps with BlueMap.
+#
+# This means creating, deleting, relocating, renaming,
+# closing, or reopening a warp will automatically be
+# reflected on BlueMap.
+sync-interval-seconds: 10
+
+debug: false
